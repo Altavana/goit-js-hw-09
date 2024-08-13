@@ -2,7 +2,6 @@
 import SimpleLightbox from 'simplelightbox';
 // Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
-
 const images = [
   {
     preview:
@@ -80,55 +79,6 @@ const galleryListEl = document.querySelector('.gallery');
 galleryListEl.innerHTML = galleryCardTemplate;
 // initialization SimpleLightbox
 new SimpleLightbox('.gallery a', {
-  nav: true,
-  captions: true,
-  captionSelector: 'img',
-  captionType: 'attr',
   captionsData: 'alt',
-  captionPosition: 'bottom',
   captionDelay: 250,
-  captionHTML: true,
-  close: true,
-  closeText: 'x',
-  docClose: true,
-  showCounter: true,
-  fileExt: 'png|jpg|jpeg|gif',
-  enableKeyboard: true,
-  //   className: 'simple-lightbox',
-  widthRatio: 0.8,
-  heightRatio: 0.9,
-  alertError: true,
-  alertErrorMessage: 'Image not found, next image will be loaded',
-  download: false,
 });
-// let gallery = new SimpleLightbox('.gallery a');
-// gallery.on('show.simplelightbox', function () {
-//   // Do something…
-// });
-
-// gallery.on('error.simplelightbox', function (event) {
-//   if (event.target.nodeName !== 'IMG') {
-//     return;
-//   }
-// });
-
-// galleryListEl.addEventListener('click', function (event) {
-//   event.preventDefault();
-//   if (event.target.nodeName !== 'IMG') {
-//     return;
-//   } else {
-//     const instance = basicLightbox.create(
-//       `<div class="modal">
-//         <img class="modal-img" src="${event.target.dataset.source}" width="1112" height="640">
-//       </div>`,
-
-//       {
-//         onShow: instance => {
-//           instance.element().querySelector('img').onclick = instance.close;
-//         },
-//       }
-//     );
-
-//     instance.show();
-//   }
-// });

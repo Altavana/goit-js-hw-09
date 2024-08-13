@@ -1,13 +1,3 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css'); */
-
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -31,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
 }
+
 ul {
   list-style-type: none;
   margin-top: 0;
@@ -46,14 +37,6 @@ h2,
 p {
   margin-top: 0;
   margin-bottom: 0;
-}
-button {
-  cursor: pointer;
-  font-family: inherit;
-  border: none;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .gallery-link {
@@ -73,6 +56,7 @@ button {
 .gallery-item {
   width: calc((100% - 48px) / 3);
 }
+
 .gallery-image {
   display: block;
   width: 100%;
@@ -80,9 +64,42 @@ button {
   object-fit: cover;
   object-position: center;
   background: rgba(46, 47, 66, 0.8);
-  cursor: zoom-in;
+  transition: 0.7s;
+}
+img:hover {
+  transform: scale(1.02); /* Увеличиваем масштаб */
+}
+.has-lightbox .sl-wrapper .sl-navigation button {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+.has-lightbox .sl-wrapper .sl-counter {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+.has-lightbox .sl-wrapper .sl-close {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+}
+.simple-lightbox {
+  background: rgba(46, 47, 66, 0.8);
 }
 /* 2 -form */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.feedback-form {
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+  background: #fff;
+}
 label {
   display: block;
   font-weight: 400;
@@ -92,7 +109,7 @@ label {
   color: #2e2f42;
   margin: 0px;
 }
-.user-password,
+.user-message,
 .user-email {
   display: block;
   border: 1px solid #808080;
@@ -104,7 +121,11 @@ label {
   padding-left: 16px;
   outline: transparent;
 }
-.user-password::placeholder,
+.user-message {
+  height: 80px;
+}
+
+.user-message::placeholder,
 .user-email::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -112,18 +133,18 @@ label {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
-.user-password:hover,
+.user-message:hover,
 .user-email:hover {
   border: 1px solid #000;
 }
-.user-password:hover,
+.user-message:hover,
 .user-email:hover {
   border: 1px solid #000;
 }
 .button-sub {
   border-radius: 8px;
   padding: 8px 16px;
-  width: 86px;
+  width: 95px;
   height: 40px;
   background: #4e75ff;
 
