@@ -32,9 +32,15 @@ const onFormSubmit = event => {
   event.preventDefault();
   if (!textEmail.value.trim() || !textMessage.value.trim()) {
     alert('Fill please all fields');
+    return;
   } else {
+    console.log(formData);
     event.target.reset();
     localStorage.removeItem('feedback-form-state');
+    formData = {
+      email: '',
+      message: '',
+    };
   }
 };
 formEl.addEventListener('input', onFormChange);
